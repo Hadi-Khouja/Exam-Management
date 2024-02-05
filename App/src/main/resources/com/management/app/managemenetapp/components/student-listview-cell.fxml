@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="listItem" alignment="CENTER" spacing="5.0" prefHeight="35.0" prefWidth="350.0"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView fx:id="image" fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
+        <Image url="@../images/person.png"/>
+    </ImageView>
+    <Label fx:id="studentId"/>
+    <Label fx:id="studentName"/>
+    <Region HBox.hgrow="ALWAYS"/>
+    <Label fx:id="major"/>
+    <fx:define>
+        <ImageView fx:id="editImage">
+            <Image url="@../images/edit-square.png"/>
+        </ImageView>
+    </fx:define>
+    <fx:define>
+        <ImageView fx:id="deleteImage">
+            <Image url="@../images/trash.png"/>
+        </ImageView>
+    </fx:define>
+    <MenuButton styleClass="button-icon">
+        <items>
+            <MenuItem fx:id="editButton" text="Edit" graphic="$editImage"/>
+            <MenuItem fx:id="deleteButton" text="Delete" graphic="$deleteImage"/>
+        </items>
+    </MenuButton>
+    <padding>
+        <Insets left="10.0" right="10.0"/>
+    </padding>
+</HBox>

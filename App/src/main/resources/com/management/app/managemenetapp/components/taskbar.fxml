@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root alignment="CENTER" prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: -fx-primary-color;"
+         type="VBox"
+         xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox fx:id="titleBox" alignment="CENTER_RIGHT" prefHeight="10.0" spacing="10.0">
+        <Button fx:id="minusButton" styleClass="button-icon">
+            <graphic>
+                <ImageView preserveRatio="true">
+                    <Image url="@../images/minus.png"/>
+                </ImageView>
+            </graphic>
+            <tooltip>
+                <Tooltip text="%Minimize"/>
+            </tooltip>
+        </Button>
+        <Button fx:id="closeButton" styleClass="button-icon">
+            <graphic>
+                <ImageView fx:id="closeImage" preserveRatio="true">
+                    <Image url="@../images/close.png"/>
+                </ImageView>
+            </graphic>
+            <tooltip>
+                <Tooltip text="%Close"/>
+            </tooltip>
+        </Button>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="70.0" spacing="10.0">
+        <fx:define>
+            <ImageView fx:id="settingsImage" preserveRatio="true">
+                <Image url="@../images/settings.png"/>
+            </ImageView>
+        </fx:define>
+        <fx:define>
+            <ImageView fx:id="accountImage" preserveRatio="true">
+                <Image url="@../images/account-circle.png"/>
+            </ImageView>
+        </fx:define>
+        <fx:define>
+            <ImageView fx:id="translationsImage" preserveRatio="true">
+                <Image url="@../images/translate-accent.png"/>
+            </ImageView>
+        </fx:define>
+        <fx:define>
+            <ImageView fx:id="logoutImage" preserveRatio="true">
+                <Image url="@../images/logout.png"/>
+            </ImageView>
+        </fx:define>
+        <ImageView fitHeight="80.0" fitWidth="150.0" preserveRatio="true">
+            <Image url="@../images/logo.png"/>
+        </ImageView>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="studentsButton" styleClass="button-icon">
+            <graphic>
+                <ImageView fx:id="studentsImage" preserveRatio="true">
+                    <Image url="@../images/groups.png"/>
+                </ImageView>
+            </graphic>
+            <tooltip>
+                <Tooltip text="%Students"/>
+            </tooltip>
+        </Button>
+        <Button fx:id="majorsButton" styleClass="button-icon">
+            <graphic>
+                <ImageView fx:id="majorsImage">
+                    <Image url="@../images/majors.png"/>
+                </ImageView>
+            </graphic>
+            <tooltip>
+                <Tooltip text="%Majors"/>
+            </tooltip>
+        </Button>
+        <Button fx:id="lecturesButton" styleClass="button-icon">
+            <graphic>
+                <ImageView fx:id="lecturesImage" preserveRatio="true">
+                    <Image url="@../images/lectures.png"/>
+                </ImageView>
+            </graphic>
+            <tooltip>
+                <Tooltip text="%Lectures"/>
+            </tooltip>
+        </Button>
+        <MenuButton fx:id="settingsButton" maxWidth="100" styleClass="button-icon" graphic="$settingsImage">
+            <items>
+                <MenuItem fx:id="profileButton" text="%Profile" graphic="$accountImage"/>
+                <Menu text="%ChangeLanguage" graphic="$translationsImage">
+                    <MenuItem fx:id="englishMenuItem" text="%English"/>
+                    <MenuItem fx:id="germanMenuItem" text="%German"/>
+                </Menu>
+                <MenuItem fx:id="logoutButton" text="%Logout" graphic="$logoutImage"/>
+            </items>
+            <tooltip>
+                <Tooltip text="%Settings"/>
+            </tooltip>
+        </MenuButton>
+        <padding>
+            <Insets left="10.0" right="10.0"/>
+        </padding>
+    </HBox>
+</fx:root>

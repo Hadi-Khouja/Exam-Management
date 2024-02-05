@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<?import com.management.app.components.Taskbar?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.management.app.controllers.StudentsController">
+    <Taskbar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+    <HBox alignment="CENTER_LEFT" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10"
+          AnchorPane.topAnchor="90">
+        <fx:define>
+            <ImageView fx:id="plusImage">
+                <Image url="@../images/add-accent.png"/>
+            </ImageView>
+        </fx:define>
+        <Label styleClass="label-big, text-fill-accent" text="%Students"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="importButton" styleClass="button-icon" onAction="#onImportClick">
+            <graphic>
+                <ImageView fitWidth="30.0" fitHeight="30.0">
+                    <Image url="@../images/import.png"/>
+                </ImageView>
+            </graphic>
+            <tooltip>
+                <Tooltip text="Import CSV"/>
+            </tooltip>
+        </Button>
+        <Button styleClass="button-icon" graphic="$plusImage" onAction="#onAddStudent">
+            <tooltip>
+                <Tooltip text="%Add"/>
+            </tooltip>
+        </Button>
+    </HBox>
+    <ListView fx:id="listView" cache="true" cacheHint="SPEED" depthTest="ENABLE" onMouseClicked="#onListClick"
+              layoutY="27.0" prefHeight="400.0" prefWidth="600.0"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="140.0"/>
+</AnchorPane>

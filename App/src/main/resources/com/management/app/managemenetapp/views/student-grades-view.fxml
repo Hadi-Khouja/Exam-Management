@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.management.app.components.Taskbar?>
+
+<AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.management.app.controllers.StudentGradesController">
+    <Taskbar AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+    <VBox alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0">
+        <Text fx:id="studentName" layoutX="370.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Musterstudent 2020201" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="12" />
+            </font>
+        </Text>
+        <TableView fx:id="table" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="courseNameColumn" minWidth="250.0" text="%Lecture"/>
+                <TableColumn fx:id="pointsColumn" minWidth="250.0" text="%Points"/>
+                <TableColumn fx:id="gradesColumn" minWidth="250.0" text="%Grade"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

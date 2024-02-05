@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.management.app.popups.SelectParticipatingMajor"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox spacing="20.0" AnchorPane.topAnchor="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0"
+          AnchorPane.rightAnchor="30.0">
+        <ListView fx:id="majorsListView"/>
+        <HBox alignment="CENTER">
+            <Button styleClass="button-raised" onAction="#selectMajor" text="%Confirm"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

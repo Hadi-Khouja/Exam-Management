@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<HBox fx:id="listItem" alignment="CENTER" spacing="5.0" prefHeight="35.0" prefWidth="350.0"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <Label fx:id="noteLabel"/>
+    <Region HBox.hgrow="ALWAYS"/>
+    <Label fx:id="minLabel" text="0"/>
+    <Region HBox.hgrow="ALWAYS"/>
+    <Label fx:id="maxLabel" text="0"/>
+    <padding>
+        <Insets left="10.0" right="10.0"/>
+    </padding>
+</HBox>

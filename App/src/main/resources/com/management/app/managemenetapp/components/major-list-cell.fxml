@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+
+<HBox fx:id="listItem" alignment="CENTER" spacing="5.0" prefHeight="35.0" prefWidth="350.0"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
+        <Image url="@../images/majors.png"/>
+    </ImageView>
+    <Label fx:id="majorName"/>
+    <TextField fx:id="majorNameTextField" HBox.hgrow="ALWAYS" visible="false"/>
+    <padding>
+        <Insets left="10.0" right="10.0"/>
+    </padding>
+</HBox>

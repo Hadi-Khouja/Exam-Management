@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.management.app.popups.AddGradeLimitPopupController"
+            prefHeight="250.0" prefWidth="500.0">
+    <HBox alignment="CENTER_LEFT" spacing="10" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0"
+          AnchorPane.topAnchor="20">
+        <Label styleClass="label-big, text-fill-primary" text="%AddGradeLimit"/>
+    </HBox>
+    <HBox spacing="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+        <VBox alignment="CENTER">
+            <Label prefHeight="23.0" maxWidth="400.0" VBox.vgrow="ALWAYS" text="%Note"/>
+            <TextField fx:id="noteTextField" prefHeight="40.0" maxWidth="400.0" promptText="%Note"/>
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label prefHeight="23.0" maxWidth="400.0" VBox.vgrow="ALWAYS" text="%Min"/>
+            <TextField fx:id="minTextField" prefHeight="40.0" maxWidth="400.0" promptText="%Min"/>
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label prefHeight="23.0" maxWidth="400.0" VBox.vgrow="ALWAYS" text="%Max"/>
+            <TextField fx:id="maxTextField" prefHeight="40.0" maxWidth="400.0" promptText="%Max"/>
+        </VBox>
+    </HBox>
+    <HBox alignment="CENTER" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.bottomAnchor="20.0">
+        <Button styleClass="button-raised" onAction="#createNewGradeLimit" text="%Confirm"/>
+    </HBox>
+</AnchorPane>

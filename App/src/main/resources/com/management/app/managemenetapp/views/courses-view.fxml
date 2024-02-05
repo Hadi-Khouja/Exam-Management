@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<?import com.management.app.components.Taskbar?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.management.app.controllers.CoursesController">
+    <Taskbar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+    <HBox alignment="CENTER_LEFT" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10"
+          AnchorPane.topAnchor="90">
+        <fx:define>
+            <ImageView fx:id="plusImage">
+                <Image url="@../images/add-accent.png"/>
+            </ImageView>
+        </fx:define>
+        <Label styleClass="label-big, text-fill-accent" text="%Lectures"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="addButton" styleClass="button-icon" graphic="$plusImage">
+            <tooltip>
+                <Tooltip text="%Add"/>
+            </tooltip>
+        </Button>
+    </HBox>
+    <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                AnchorPane.topAnchor="140.0" fitToWidth="true">
+        <Accordion fx:id="coursesAccordion">
+            <panes/>
+        </Accordion>
+    </ScrollPane>
+</AnchorPane>

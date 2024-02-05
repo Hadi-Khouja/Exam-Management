@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="250.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.management.app.popups.AddCoursePopupController">
+    <HBox alignment="CENTER_LEFT" spacing="10" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0"
+          AnchorPane.topAnchor="20">
+        <Label styleClass="label-big, text-fill-primary" text="%AddCourse"/>
+    </HBox>
+    <VBox alignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+        <Label prefHeight="23.0" maxWidth="400.0" VBox.vgrow="ALWAYS" text="%LectureName"/>
+        <TextField fx:id="courseNameTextField" prefHeight="40.0" maxWidth="400.0" promptText="%LectureName"/>
+    </VBox>
+    <HBox alignment="CENTER" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.bottomAnchor="20.0">
+        <Button styleClass="button-raised" onAction="#createNewCourse" text="%Confirm"/>
+    </HBox>
+</AnchorPane>

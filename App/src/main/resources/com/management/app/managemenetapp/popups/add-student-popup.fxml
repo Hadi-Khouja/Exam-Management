@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.management.app.popups.AddStudentPopupController">
+    <HBox alignment="CENTER_LEFT" spacing="10" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0"
+          AnchorPane.topAnchor="20">
+        <Label styleClass="label-big, text-fill-primary" text="%AddStudent"/>
+    </HBox>
+    <VBox spacing="25.0" AnchorPane.bottomAnchor="270" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0"
+          AnchorPane.topAnchor="60">
+        <VBox>
+            <Label maxWidth="400.0" prefHeight="23.0" text="%MatriculationNumber" VBox.vgrow="ALWAYS"/>
+            <TextField fx:id="matriculationTextField" maxWidth="310.0" prefHeight="40.0"
+                       promptText="%MatriculationNumber"/>
+        </VBox>
+        <HBox spacing="20.0">
+            <VBox>
+                <Label prefHeight="23.0" prefWidth="400.0" text="%FirstName" VBox.vgrow="ALWAYS"/>
+                <TextField fx:id="firstNameTextField" prefHeight="40.0" prefWidth="310.0" promptText="%FirstName"/>
+            </VBox>
+            <VBox>
+                <Label prefHeight="23.0" prefWidth="400.0" text="%LastName" VBox.vgrow="ALWAYS"/>
+                <TextField fx:id="lastNameTextField" prefHeight="40.0" prefWidth="310.0" promptText="%LastName"/>
+            </VBox>
+        </HBox>
+    </VBox>
+    <VBox spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <fx:define>
+                <ImageView fx:id="plusImage">
+                    <Image url="@../images/add-accent.png"/>
+                </ImageView>
+            </fx:define>
+            <Label styleClass="label-big, text-fill-primary" text="%Majors"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button onAction="#onAddMajor" styleClass="button-icon" graphic="$plusImage">
+                <tooltip>
+                    <Tooltip text="%Add"/>
+                </tooltip>
+            </Button>
+        </HBox>
+        <ListView fx:id="majorsListView" editable="true" maxHeight="200.0"/>
+        <HBox alignment="CENTER">
+            <Button styleClass="button-raised" onAction="#createStudent" text="%Confirm"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

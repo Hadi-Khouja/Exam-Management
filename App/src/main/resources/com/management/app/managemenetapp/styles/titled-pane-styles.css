@@ -1,0 +1,19 @@
+@import "color-palette.css";
+
+.titled-pane > .title {
+    -fx-background-color: -fx-box-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+    -fx-padding: 0.166667em 1.166667em 0.25em 0;
+    -fx-color: -fx-accent-color;
+    -fx-pref-height: 45px;
+    -fx-font-size: 15.0;
+}
+
+.titled-pane {
+    -fx-text-fill: -fx-white-color;
+}
+
+.titled-pane > .title > .arrow-button .arrow {
+    -fx-background-color: -fx-white-color;
+}

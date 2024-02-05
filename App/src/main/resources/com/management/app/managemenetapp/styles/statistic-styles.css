@@ -1,0 +1,9 @@
+@import "color-palette.css";
+
+.default-color0.chart-bar {
+    -fx-bar-fill: -fx-accent-color
+}
+
+.default-color1.chart-bar {
+    -fx-bar-fill: -fx-warn-color
+}

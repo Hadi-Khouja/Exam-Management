@@ -1,0 +1,44 @@
+@import "color-palette.css";
+@import "button-styles.css";
+@import "titled-pane-styles.css";
+@import "tab-pane-styles.css";
+@import "table-styles.css";
+
+.label {
+    -fx-text-fill: -fx-black-color;
+    -fx-font-family: Inter;
+}
+
+.label-big {
+    -fx-font-size: 18.0;
+    -fx-pref-width: 400.0;
+    -fx-pref-height: 23.0;
+}
+
+.text-fill-white {
+    -fx-text-fill: -fx-white-color;
+}
+
+.text-fill-primary {
+    -fx-text-fill: -fx-primary-color;
+}
+
+.text-fill-accent {
+    -fx-text-fill: -fx-accent-color;
+}
+
+.text-fill-warn {
+    -fx-text-fill: -fx-warn-color;
+}
+
+.text-fill-info {
+    -fx-text-fill: -fx-info-color;
+}
+
+.width-150px {
+    -fx-pref-width: 150px;
+}
+
+.width-200px {
+    -fx-pref-width: 200px;
+}

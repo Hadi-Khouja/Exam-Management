@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.management.app.components.Taskbar?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.management.app.controllers.ProfileController"
+            prefHeight="400.0" prefWidth="600.0">
+    <Taskbar AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0"/>
+    <HBox alignment="CENTER_LEFT" spacing="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10"
+          AnchorPane.topAnchor="90">
+        <Label styleClass="label-big, text-fill-accent" text="%Profile"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="saveButton" styleClass="button-icon" disable="true" onAction="#onSave">
+            <graphic>
+                <ImageView>
+                    <Image url="@../images/save.png"/>
+                </ImageView>
+            </graphic>
+            <tooltip>
+                <Tooltip text="%Save"/>
+            </tooltip>
+        </Button>
+        <Button styleClass="button-icon" onAction="#onEdit">
+            <graphic>
+                <ImageView>
+                    <Image url="@../images/edit-square.png"/>
+                </ImageView>
+            </graphic>
+            <tooltip>
+                <Tooltip text="%Edit"/>
+            </tooltip>
+        </Button>
+    </HBox>
+    <VBox alignment="TOP_CENTER" spacing="25.0" AnchorPane.topAnchor="150" AnchorPane.rightAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.bottomAnchor="0">
+        <HBox alignment="CENTER" spacing="20.0">
+            <VBox>
+                <Label prefHeight="23.0" prefWidth="400.0" text="%Username" VBox.vgrow="ALWAYS"/>
+                <TextField fx:id="usernameTextField" disable="true" prefHeight="40.0" prefWidth="365.0"
+                           promptText="%Username"/>
+            </VBox>
+            <VBox>
+                <Label prefHeight="23.0" prefWidth="400.0" text="%AcademicGrade" VBox.vgrow="ALWAYS"/>
+                <ChoiceBox fx:id="academicGradeChoiceBox" disable="true" prefHeight="40.0" prefWidth="400.0"/>
+            </VBox>
+        </HBox>
+        <HBox alignment="CENTER" spacing="20.0">
+            <VBox>
+                <Label prefHeight="23.0" prefWidth="400.0" text="%FirstName" VBox.vgrow="ALWAYS"/>
+                <TextField fx:id="firstNameTextField" disable="true" prefHeight="40.0" prefWidth="365.0"
+                           promptText="%FirstName"/>
+            </VBox>
+            <VBox>
+                <Label prefHeight="23.0" prefWidth="400.0" text="%LastName" VBox.vgrow="ALWAYS"/>
+                <TextField fx:id="lastNameTextField" disable="true" prefHeight="40.0" prefWidth="365.0"
+                           promptText="%LastName"/>
+            </VBox>
+        </HBox>
+        <HBox alignment="CENTER" spacing="20.0">
+            <VBox>
+                <Label prefHeight="23.0" prefWidth="400.0" text="%EmailAddress" VBox.vgrow="ALWAYS"/>
+                <TextField fx:id="emailTextField" disable="true" prefHeight="40.0" prefWidth="365.0"
+                           promptText="%EmailAddress"/>
+            </VBox>
+            <VBox>
+                <Label prefHeight="23.0" prefWidth="400.0" text="%WorkingGroup" VBox.vgrow="ALWAYS"/>
+                <TextField fx:id="workingGroupTextField" disable="true" prefHeight="40.0" prefWidth="365.0"
+                           promptText="%WorkingGroup"/>
+            </VBox>
+        </HBox>
+        <HBox alignment="CENTER" spacing="20.0">
+            <VBox>
+                <Label prefHeight="23.0" prefWidth="400.0" text="%TelephoneNumber" VBox.vgrow="ALWAYS"/>
+                <TextField fx:id="telephoneNumberField" disable="true" prefHeight="40.0" prefWidth="365.0"
+                           promptText="%TelephoneNumber"/>
+            </VBox>
+            <VBox>
+                <Label prefHeight="23.0" prefWidth="400.0" text="%Room" VBox.vgrow="ALWAYS"/>
+                <TextField fx:id="roomTextField" disable="true" prefHeight="40.0" prefWidth="365.0" promptText="%Room"/>
+            </VBox>
+        </HBox>
+    </VBox>
+</AnchorPane>

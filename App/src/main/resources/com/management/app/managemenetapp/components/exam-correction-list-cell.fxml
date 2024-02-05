@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="listItem" alignment="CENTER" spacing="5.0" prefHeight="35.0" prefWidth="350.0"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView fx:id="image" fitHeight="30.0" fitWidth="25.0" preserveRatio="true">
+        <Image url="@../images/person.png"/>
+    </ImageView>
+    <Label fx:id="title"/>
+    <Region HBox.hgrow="ALWAYS"/>
+    <TextField fx:id="earnedPointsTextField" maxWidth="30.0" visible="false"/>
+    <Label fx:id="earnedPointsLabel" text="0"/>
+    <Label text="/"/>
+    <Label fx:id="taskPoints" text="20"/>
+    <padding>
+        <Insets left="10.0" right="10.0"/>
+    </padding>
+</HBox>

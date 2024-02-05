@@ -1,0 +1,56 @@
+@import "color-palette.css";
+
+.button {
+    -fx-font-family: Inter;
+    -fx-font-size: 14.0;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.button:hover {
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-content-display: LEFT;
+}
+
+.button-raised {
+    -fx-text-fill: -fx-white-color;
+    -fx-background-color: -fx-accent-color;
+    -fx-pref-height: 50.0;
+    -fx-pref-width: 100.0;
+}
+
+.button-raised:hover {
+    -fx-background-color: -fx-focus-color;
+}
+
+.button-stroked {
+    -fx-text-fill: -fx-accent-color;
+    -fx-background-color: -fx-white-color;
+    -fx-border-color: -fx-accent-color;
+    -fx-pref-height: 50.0;
+    -fx-pref-width: 100.0;
+}
+
+.button-stroked:hover {
+    -fx-background-color: #e1e1e1;
+}
+
+.button-basic {
+    -fx-text-fill: -fx-black-color;
+    -fx-alignment: center-left;
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-pref-height: 50.0;
+}
+
+.button-basic:hover {
+    -fx-underline: true;
+}
+
+.button-icon {
+    -fx-background-color: rgba(255, 255, 255, 0);
+}
+
+.button-icon:hover {
+    -fx-background-color: rgba(49, 49, 49, 0.1);
+}
